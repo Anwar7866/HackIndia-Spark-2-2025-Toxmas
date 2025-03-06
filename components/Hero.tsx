@@ -80,7 +80,7 @@ export default function Hero() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              <span className={classes.highlight}>ClosedAi</span>
+              <span className={classes.highlight}>Toxmas</span>
             </Title>
             <Text color="dimmed" mt="md">
               A simple, locally running ChatGPT UI.
@@ -123,7 +123,7 @@ export default function Hero() {
               </Button>
               <Button
                 component="a"
-                href="https://github.com/ClosedAi/ClosedAi"
+                href="https://github.com/Toxmas/Toxmas"
                 variant="default"
                 radius="xl"
                 size="md"

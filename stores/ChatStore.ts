@@ -102,7 +102,7 @@ export interface ChatState {
   settingsForm: SettingsForm;
   defaultSettings: SettingsForm;
   navOpened: boolean;
-
+  setInputText?: (text: string) => void;
   pushToTalkMode: boolean;
   recorder: MediaRecorder | undefined;
   recognizer: SpeechRecognizer | undefined;

@@ -1,0 +1,37 @@
+.cameraButton {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.cameraButton:hover {
+  background-color: #2980b9;
+}
+
+.imagePreview {
+  position: absolute;
+  right: 55px; /* Adjust based on camera button */
+  bottom: 12px;
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add some subtle hover effects */
+.textArea:hover,
+.imagePreview:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}

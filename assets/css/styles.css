@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@400;700&family=Orbitron:wght@400;500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,300&family=Roboto:wght@900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-cover {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.login-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, #ff3535d4, rgba(21, 17, 255, 0.133));
+    filter: brightness(.3);
+    z-index: -1;
+}
+
+@keyframes bgchange {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: -100% -100%;
+    }
+}
+
+#signinButton,
+#signupButton {
+    margin-top: 20px;
+    background: linear-gradient(to bottom right, rgb(249, 156, 62), #cf6523)
+}
+
+#signinButton:hover,
+#signupButton:hover {
+    opacity: .8;
+}
+
+#ctaBtn {
+    color: #fff;
+}
+
+#ctaBtn a {
+    color: #fa5;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Orbitron';
+    letter-spacing: 1px;
+}
+
+.page-cta {
+    font-family: 'Orbitron';
+    letter-spacing: 1px;
+}
+
+.page-title {
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}

@@ -11,6 +11,7 @@ import {
   Divider,
   px,
 } from "@mantine/core";
+import WalletButton from "./WalletButton";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconUser, IconPlus } from "@tabler/icons-react";
 import { useChatStore } from "@/stores/ChatStore";
@@ -104,6 +105,15 @@ export default function MuHeader({ children }: any) {
   const isKnownModel = modelInfos[activeModel] !== undefined;
   const modelInfo = getModelInfo(activeModel);
 
+  const handleConnect = (address: string) => {
+    console.log("Wallet connected:", address);
+    // Do something with the connected address
+  };
+
+  const handleDisconnect = () => {
+    console.log("Wallet disconnected");
+    // Do something on disconnect
+  };
   return (
     <Header height={36} mb={120} sx={{ zIndex: 1002 }}>
       <Container className={classes.inner}>
@@ -130,12 +140,17 @@ export default function MuHeader({ children }: any) {
                 </MediaQuery>
               </>
             ) : null}
-            <Text size="lg">CLOSED AI - FINTECH BOT</Text>
+            <Text size="lg">TOXMAS - FINTECH BOT</Text>
             {isKnownModel && (
               <>
                 <Divider size="xs" orientation="vertical" />
                 <Text size="sm">
-                  ${(activeChat?.costIncurred || 0).toFixed(2)}
+                  <img
+                    src="https://i.ibb.co/rRSM9fTW/singularitynet-agix-logo-1.png"
+                    alt="Description"
+                    className="w-5 h-5 rounded-sm"
+                  />
+                  {(activeChat?.costIncurred || 0).toFixed(2)}
                 </Text>
               </>
             )}
@@ -161,12 +176,11 @@ export default function MuHeader({ children }: any) {
             </ActionIcon>
           </MediaQuery>
           <MediaQuery smallerThan="sm" styles={{ display: "none", width: 0 }}>
-            <ActionIcon
-              sx={{ opacity: 0.8 }}
-              onClick={() => {
-              }}
-            >
-              <IconUser size={px("1.5rem")} />
+            <ActionIcon sx={{ opacity: 0.8 }} onClick={() => {}}>
+              <WalletButton
+                onConnect={handleConnect}
+                onDisconnect={handleDisconnect}
+              />
             </ActionIcon>
           </MediaQuery>
         </Group>
